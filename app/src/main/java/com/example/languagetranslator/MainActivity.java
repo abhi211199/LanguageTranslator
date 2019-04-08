@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
         String str;
         @Override
         protected Void doInBackground(Void... voids) {
-            Translate translate = TranslateOptions.newBuilder().setApiKey("AIzaSyBCn7KgxDQg9uxM9hFiZCuWbAgiNhVwjC8").build().getService();
+            Translate translate = TranslateOptions.newBuilder().setApiKey("api_key").build().getService();
             Detection detection = translate.detect(inp.getText().toString());
             String detectedLanguage = detection.getLanguage();
             Translation translation =
